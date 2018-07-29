@@ -9,5 +9,7 @@
 #define LINE_SIZE 20
 void selectSecretWord(char*);
 int countWords();
+int existsIn(char, char*, char*);
+int toWinGame(char*);
 
 #endif // PENDU_H_INCLUDED

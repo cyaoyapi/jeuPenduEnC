@@ -1,3 +1,7 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 #include "pendu.h"
 
 /*
@@ -51,4 +55,39 @@ int countWords(){
         exit(0);
     }
     return number_of_words;
+}
+
+
+/*
+ Function to check if the proposed character by the gamer is in
+ the secret word
+*/
+int existsIn(char proposed_character, char* secret_word, char* secret_word_for_displaying){
+    int exists = 0;
+
+    for(int i = 0; i < strlen(secret_word) -1; i++){
+    	if(secret_word[i] == proposed_character){
+    		secret_word_for_displaying[i] = proposed_character;
+    		exists = 1;
+    	}
+    }
+    return exists;
+
+}
+
+
+/*
+ Function to check if the gamer wins the party.
+ We check that there are not * in the char * secret_word_for_displaying
+*/
+
+int toWinGame(char* secret_word_for_displaying){
+	int victory = 1;
+	for(int i = 0; i < strlen(secret_word_for_displaying) - 1; i++){
+		if(secret_word_for_displaying[i] == '*'){
+			victory = 0;
+		}
+	}
+	return victory;
+
 }
