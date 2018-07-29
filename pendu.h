@@ -6,7 +6,7 @@
 #include <time.h>
 
 #define WORDS_LIST_FILE "liste_mots.txt"
-#define LINE_SIZE 1000
+#define LINE_SIZE 20
 void selectSecretWord(char*);
 int countWords();
 
