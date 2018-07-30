@@ -43,7 +43,7 @@ int main()
         }
         //Check if the gamer wins the party
         if(toWinGame(secret_word_for_displaying)){
-            printf("Bravo! Vous avez gangez. Le moot secret etait bien %s\n",secret_word);
+            printf("Bravo! Vous avez gangez. Le mot secret etait bel et bien : %s\n",secret_word);
             break;
         }else{
             if(tries == 0){
