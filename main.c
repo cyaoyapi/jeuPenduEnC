@@ -34,7 +34,8 @@ int main()
     printf("==============Bienvenue dans le jeu du pendu==============\n");
     while(continue_game){
         printf("Il vous reste %d coup(s) a jouer\n",tries);
-        printf("Quel est le mot secret ? %s\n",secret_word_for_displaying);        printf("Proposez une lettre : ");
+        printf("Quel est le mot secret ? %s\n",secret_word_for_displaying);
+        printf("Proposez une lettre : ");
         proposed_character = readCharacter(); // reading the proposed character
         // Check if the proposed character is in the secret word
         if(existsIn(proposed_character, secret_word, secret_word_for_displaying) == 0){
